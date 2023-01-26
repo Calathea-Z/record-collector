@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% comment %} for head title tags and helping us with SEO {% endcomment %}
+{% block title %}All Records{% endblock  %}
+
+{% block content %}
+
+  {% for record in records %}
+<div>
+          <img src="{{records.image}}" alt="{{records.title}}" />
+</div>
+<div>
+    <p>{{records.artist}}</p>
+</div>
+
+  {% endfor %}
+</div>
+{% endblock %}
