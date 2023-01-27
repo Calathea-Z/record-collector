@@ -12,3 +12,16 @@ class Artist(models.Model):
 
     class Meta:
         ordering = ['name']
+
+class Records(models.Model):
+
+    title = models.CharField(max_length=100)
+    artist = models.CharField(max_length=250)
+    year_made = models.TextField(max_length=500)
+    img = models.TextField(max_length=500)
+    
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['title']
