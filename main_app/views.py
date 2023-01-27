@@ -18,6 +18,11 @@ class Record:
         self.label = label
         self.id = _id
         self.condition = condition
+class Artist:
+    def __init__(self, name, albums, genre):
+        self.name = name
+        self.albums = albums
+        genre = genre
 
 img_address =  "https://images.genius.com/1f61e7c20f3ec7d82362ab7034328abe.1000x980x1.jpg"       
 
@@ -31,4 +36,12 @@ class RecordsList(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["records"] = records 
+        return context
+    
+class ArtistsList(TemplateView):
+    template_name = "record_list.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["artists"] = artists
         return context
