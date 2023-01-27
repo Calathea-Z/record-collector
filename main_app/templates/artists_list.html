@@ -3,28 +3,22 @@
 All Artists
 {% endblock %}
 {% block content %}
-<h1 class="title pt-5">My Albums</h1>
+<h1 class="title pt-5">All Artists in Collection</h1>
 <div class="gallery">
-  {% for record in records %}
+  {% for artist in artists %}
   <a href="">
     <div class="flexy">
       <div>
-      <h1>{{record.title}}</h1>
+      <h1>{{artist.name}}</h1>
     </div>
     <div>
-      <h5>By</h5>
-    </div>
-    <div>
-      <h1>{{record.artist}}</h1>
-    </div>
-    <div>
-      <h3>{{record.year_made}}</h3>
+      <h1>{{artists.bio}}</h1>
     </div>
     </div>
     <div class="card">
       <div class="card-image">
         <figure class="image is-square">
-          <img src="{{record.image}}" alt="{{record.artist}}" />
+          <img src="{{artists.img}}" alt="{{artist.name}}" />
         </figure>
       </div>
       <div class="card-header">
