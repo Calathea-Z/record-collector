@@ -1,0 +1,53 @@
+body {
+    background-color: #b7f0c5;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+h1 {
+    color:rgb(252, 188, 105);
+}
+
+h3 {
+    color: #fcf886;
+}
+
+h5{ color:rgb(122, 107, 238)
+
+}
+
+.flexy {
+    display: flex;
+    justify-content: center;
+    font:900;
+    font-size: 75px;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+
+.title {
+    color: #ffffff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    gap: 30px;
+}
+
+.gallery .card {
+    transition: .1s linear;
+}
+
+.gallery .card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+p {
+    font-size: 12px;
+}
+
+

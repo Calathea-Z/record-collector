@@ -10,13 +10,13 @@ class About(TemplateView):
     template_name = 'about.html'
 
 class Record:
-    def __init__(self, title, artist, image, year_made, label, id, condition):
+    def __init__(self, title, artist, image, year_made, label, _id, condition):
         self.title = title
         self.artist = artist
         self.image = image
         self.year_made = year_made
         self.label = label
-        self.id = id
+        self.id = _id
         self.condition = condition
 
 img_address =  "https://images.genius.com/1f61e7c20f3ec7d82362ab7034328abe.1000x980x1.jpg"       
